@@ -1,126 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        body{
+
+        .page{
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;;
+            position: relative;
             height: 100vh;
             width: 100vw;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            background-color: #111111;
         }
-        .container{
-            position: relative;
-            height: 600px;
-            width: 500px;
+
+        .heading {
+            margin-top: 100px;
+        }
+
+        .container1 {
+            margin-top: 50px;
+            height: 300px;
+            width: 330px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .inputs{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #username , #password {
+            border-radius: 3px;
+            border: 1px solid #DBDBDB;
+            width: 250px;
+            height: 35px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        #username , #password ::placeholder{
+            color: #737373;
+        }
+        .login {
             display: flex;
             justify-content: center;
-            background-color: #0a0405;
-            border-radius: 5px;
+            align-items: center;
+            border-radius: 7px;
+            height: 30px;
+            width: 250px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+            background-color: #4CB5F9;
         }
-        input{
-            height: 70px;
-            width: 400px;
-            position: absolute;
-            top: 120px;
-            font-size: 20px;
-            border-radius: 5px;
+
+        .facebook {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7px;
+            height: 30px;
+            width: 250px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+            background-color: #1877F2;
         }
-        .rows{
-            position: absolute;
-            bottom: 0;
-            height: 400px;
-            width: 500px;
+        .or{
+            font-size: 16px;
+            color: #737373;
+            font-weight: 600;
+        }
+        .forget {
+            color: #0095F6;
+            padding-left: 120px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .dont-have-account{
+            font-size: 14px;
+            font-weight: 600;
+            color: #737373;
+        }
+        .dont-have-account span{
+            color: #0095F6;
+        }
+        .from-meta{
+            margin-top: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2px;
+            width: 100px;
+            height: 70px;
         }
-        .row{
-            padding: 0 2px;
+        .from{
+            font-size: 15px;
+            color: #737373;
+        }
+        footer{
+            font-size: 16px;
+            position: absolute;
+            bottom: 0;
+            height: 100px;
+            width: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .line1 , .line2 , .line3{
             display: flex;
             flex-direction: row;
-        }
-        .row > button{
-            height: 75px;
-            width: 120px;
-            border-radius: 5px;
-            font-size: 20px;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            cursor: pointer;
-        }
-        .row > button:hover{
-            background-color: gray;
-        }
-        .equal{
-            background-color: rgb(52, 124, 231);
+            gap: 10px;
+            color: #737373;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <input class="input" type="text">
-        <div class="rows">
-            <div class="row one">
-                <button class="button">%</button>
-                <button class="button">CE</button>
-                <button class="button">C</button>
-                <button class="button">/</button>
+    <div class="page">
+        <div class="heading">
+            <img height="60px" width="180px" src="images.png">
+        </div>
+        <div class="container1">
+            
+            <div class="facebook">Continue with Facebook</div>
+            <div class="or">OR</div>
+
+        <div class="inputs">
+            <input type="text" id="username" placeholder="Phone number, username or email">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+            <div class="forget">
+                Forget password?
             </div>
-            <div class="row two">
-                <button class="button">7</button>
-                <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button">*</button>
+            <div class="login">Log in</div>
         </div>
-        <div class="row three">
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button">-</button>
+
+        <div class="dont-have-account">Don't have an account?<span>Sign up</span></div>
+
+        <div class="from-meta">
+            <div class="from">from</div>
+            <div class="meta">
+                <img height="30px" width="85px" src="/meta.png">
+            </div>
         </div>
-        <div class="row four">
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button">+</button>
-        </div>
-        <div class="row five">
-            <button class="button">+/-</button>
-            <button class="button">0</button>
-            <button class="button">.</button>
-            <button class="button equal">=</button>
-        </div>
+        <footer>
+
+            <div class="line1">
+                <h5>Meta</h5>
+                <h5>About</h5>
+                <h5>Blog</h5>
+                <h5>Jobs</h5>
+                <h5>Help</h5>
+                <h5>API</h5>
+                <h5>Privacy</h5>
+                </div>
+                <div class="line2">
+                <h5>Terms</h5>
+                <h5>Locations</h5>
+                <h5>Instagram Lite</h5>
+                <h5>Threads</h5>
+                </div>
+                <div class="line3">
+                <h5>Contact Uploading & Non-Users</h5>
+                <h5>Meta verfied</h5>
+            </div>
+        </footer>
     </div>
-    </div>
-    <script>
-        let string = ""
-        let buttons = document.querySelectorAll(".button")
-        Array.from(buttons).forEach((buttons)=>{
-            buttons.addEventListener("click" , (e)=>{
-                if(e.target.innerHTML == '='){
-                    string = eval(string)
-                    document.querySelector('input').value = string 
-                }  
-                else if(e.target.innerHTML == 'C'){
-                    string = ""
-                    document.querySelector('input').value = string 
-                }
-                else{
-                    string = string + e.target.innerHTML;
-                    document.querySelector('input').value = string
-                }
-            })
-        })
-    </script>
 </body>
+
 </html>
