@@ -1,90 +1,126 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-
-<body bgcolor="rgb(30, 94, 149)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        * {
+        *{
             margin: 0;
             padding: 0;
         }
-
-        .container {
-            background-color: white;
-            height: 60vh;
-            width: 30vw;
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #111111;
+        }
+        .container{
             position: relative;
-            left: 34vw;
-            top: 18vh;
+            height: 600px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            background-color: #0a0405;
+            border-radius: 5px;
         }
-
-        .header {
+        input{
+            height: 70px;
+            width: 400px;
             position: absolute;
-            margin: 3vh 0vh 1vh 3vh;
-            font-size: 4vh;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            top: 120px;
+            font-size: 20px;
+            border-radius: 5px;
         }
-
-        .box1 {
+        .rows{
             position: absolute;
-            margin: 8vh 0vh 0vh 3vh;
+            bottom: 0;
+            height: 400px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
         }
-
-        .box2 {
-            margin: 12vh 0vh 0vh 3vh;
-            height: 5vh;
+        .row{
+            padding: 0 2px;
+            display: flex;
+            flex-direction: row;
         }
-
-        .box3 {
-            margin: 12vh 0vh 0vh 3vh;
-            height: 5vh;
+        .row > button{
+            height: 75px;
+            width: 120px;
+            border-radius: 5px;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            cursor: pointer;
         }
-
-        .box4 {
-            margin: 3vh 0vh 0vh 3vh;
-            height: 5vh;
-            width: 22vw;
+        .row > button:hover{
+            background-color: gray;
         }
-
-        .box5 {
-            margin: 3vh 0vh 0vh 3vh;
-            height: 5vh;
-            width: 22vw;
-        }
-        .box6{
-            margin: 3vh 0vh 0vh 3vh;
-            font-size: 2vh;
-        }
-        .box7{
-            font-size: 3vh;
-            width: 5vw;
-            height: 4vh;
-            margin: 4vh 0vh 0vh 5vh;
-
+        .equal{
+            background-color: rgb(52, 124, 231);
         }
     </style>
-    </head>
-
+</head>
+<body>
     <div class="container">
-        <div class="header">
-            SIGN UP
+        <input class="input" type="text">
+        <div class="rows">
+            <div class="row one">
+                <button class="button">%</button>
+                <button class="button">CE</button>
+                <button class="button">C</button>
+                <button class="button">/</button>
+            </div>
+            <div class="row two">
+                <button class="button">7</button>
+                <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">*</button>
         </div>
-        <p class="box1">Please fill this form to create an account</p>
-
-        <form>
-            <input class="box2" type="text" placeholder="First Name">
-            <input class="box3" type="text" placeholder="Last Name">
-            <input class="box4" type="text" placeholder="Email">
-            <input class="box5" type="password" placeholder="Password">
-            <input class="box5" type="password" placeholder="Confirm Password">
-        </form>
-        <div class="box6"> <input type="checkbox" value="Policy" name="Terms" id="1"> I accept the <a href="#">Terms Of Use</a> & <a
-            href="#">Privacy Policy</a>
+        <div class="row three">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">-</button>
         </div>
-        <div class="box7">
-            <a href="">Sign up</a>
+        <div class="row four">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">+</button>
+        </div>
+        <div class="row five">
+            <button class="button">+/-</button>
+            <button class="button">0</button>
+            <button class="button">.</button>
+            <button class="button equal">=</button>
         </div>
     </div>
+    </div>
+    <script>
+        let string = ""
+        let buttons = document.querySelectorAll(".button")
+        Array.from(buttons).forEach((buttons)=>{
+            buttons.addEventListener("click" , (e)=>{
+                if(e.target.innerHTML == '='){
+                    string = eval(string)
+                    document.querySelector('input').value = string 
+                }  
+                else if(e.target.innerHTML == 'C'){
+                    string = ""
+                    document.querySelector('input').value = string 
+                }
+                else{
+                    string = string + e.target.innerHTML;
+                    document.querySelector('input').value = string
+                }
+            })
+        })
+    </script>
 </body>
-
 </html>
