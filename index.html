@@ -10,20 +10,22 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
-        .page{
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;;
+        .page {
             position: relative;
             height: 100vh;
             width: 100vw;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            background-color: #fff;
         }
 
         .heading {
-            margin-top: 100px;
+            margin-top: 50px;
         }
 
         .container1 {
@@ -35,12 +37,15 @@
             align-items: center;
             gap: 20px;
         }
-        .inputs{
+
+        .inputs {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        #username , #password {
+
+        #username,
+        #password {
             border-radius: 3px;
             border: 1px solid #DBDBDB;
             width: 250px;
@@ -49,9 +54,12 @@
             font-size: 12px;
             font-weight: 400;
         }
-        #username , #password ::placeholder{
+
+        #username,
+        #password ::placeholder {
             color: #737373;
         }
+
         .login {
             display: flex;
             justify-content: center;
@@ -59,9 +67,11 @@
             border-radius: 7px;
             height: 30px;
             width: 250px;
+            margin-top: 20px;
             color: #ffffff;
             font-weight: 600;
             font-size: 14px;
+            cursor: pointer;
             background-color: #4CB5F9;
         }
 
@@ -77,27 +87,33 @@
             font-size: 14px;
             background-color: #1877F2;
         }
-        .or{
+
+        .or {
             font-size: 16px;
             color: #737373;
             font-weight: 600;
         }
+
         .forget {
             color: #0095F6;
             padding-left: 120px;
             font-size: 14px;
             font-weight: 600;
+            margin-top: 10px;
         }
-        .dont-have-account{
+
+        .dont-have-account {
             font-size: 14px;
             font-weight: 600;
             color: #737373;
         }
-        .dont-have-account span{
+
+        .dont-have-account span {
             color: #0095F6;
         }
-        .from-meta{
-            margin-top: 50px;
+
+        .from-meta {
+            margin-top: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -105,11 +121,13 @@
             width: 100px;
             height: 70px;
         }
-        .from{
+
+        .from {
             font-size: 15px;
             color: #737373;
         }
-        footer{
+
+        footer {
             font-size: 16px;
             position: absolute;
             bottom: 0;
@@ -121,11 +139,59 @@
             align-items: center;
             justify-content: center;
         }
-        .line1 , .line2 , .line3{
+
+        .line1,
+        .line2,
+        .line3 {
             display: flex;
             flex-direction: row;
             gap: 10px;
             color: #737373;
+        }
+
+        .page2 {
+            display: none;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .msg {
+            display: flex;
+            place-content: center;
+            font-size: 100px;
+            margin-top: 100px;
+            color: black;
+        }
+
+        .page3 {
+            display: none;
+            /* display: flex; */
+            flex-direction: column;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .page3 h1 {
+            padding-top: 250px;
+            display: flex;
+            place-content: center;
+            font-size: 100px;
+        }
+
+        .page3 h4 {
+            display: flex;
+            place-content: center;
+        }
+
+        .page3 h5 {
+            padding-top: 20px;
+            padding-left: 120px;
+            display: flex;
+            place-content: center;
+            width: 250px;
+            text-align: center;
         }
     </style>
 </head>
@@ -136,18 +202,22 @@
             <img height="60px" width="180px" src="images.png">
         </div>
         <div class="container1">
-            
+
             <div class="facebook">Continue with Facebook</div>
             <div class="or">OR</div>
 
-        <div class="inputs">
-            <input type="text" id="username" placeholder="Phone number, username or email">
-            <input type="password" id="password" placeholder="Password">
-        </div>
-            <div class="forget">
-                Forget password?
-            </div>
-            <div class="login">Log in</div>
+            <form>
+
+                <div class="inputs">
+                    <input type="text" id="username" placeholder="Phone number, username or email" required autofocus>
+                    <input type="password" id="password" placeholder="Password" required autofocus>
+                </div>
+                <div class="forget">
+                    Forget password?
+                </div>
+                <input type="submit" class="login">
+
+            </form>
         </div>
 
         <div class="dont-have-account">Don't have an account?<span>Sign up</span></div>
@@ -155,7 +225,7 @@
         <div class="from-meta">
             <div class="from">from</div>
             <div class="meta">
-                <img height="30px" width="85px" src="meta.png">
+                <img height="30px" width="85px" src="/meta.png">
             </div>
         </div>
         <footer>
@@ -168,19 +238,71 @@
                 <h5>Help</h5>
                 <h5>API</h5>
                 <h5>Privacy</h5>
-                </div>
-                <div class="line2">
+            </div>
+            <div class="line2">
                 <h5>Terms</h5>
                 <h5>Locations</h5>
                 <h5>Instagram Lite</h5>
                 <h5>Threads</h5>
-                </div>
-                <div class="line3">
+            </div>
+            <div class="line3">
                 <h5>Contact Uploading & Non-Users</h5>
                 <h5>Meta verfied</h5>
             </div>
         </footer>
     </div>
+
+    <div class="page2">
+        <div class="msg">
+            Aur kya haal hai?
+        </div>
+    </div>
+
+    <div class="page3">
+        <h1>404</h1>
+        <h4>Page not found</h4>
+        <h5>The response requested could not be found on the server.</h5>
+    </div>
+
+    <script>
+
+        const form = document.querySelector("form")
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault()
+
+            // Creating a new FormData object
+            const fd = new FormData()
+
+            // Getting the values of username and password fields
+            const usernameValue = document.querySelector("#username").value
+            const passwordValue = document.querySelector("#password").value
+
+            // Appending the values to the FormData object
+            fd.append('username', usernameValue)
+            fd.append('password', passwordValue)
+
+            // Logging the FormData object
+            for (let pair of fd.entries()) {
+                console.log(pair[0] + ', ' + pair[1])
+            }
+        })
+
+        let loginBtn = document.querySelector(".login")
+        let page = document.querySelector(".page")
+        let page2 = document.querySelector(".page2")
+        let page3 = document.querySelector(".page3")
+
+
+        loginBtn.addEventListener("click", () => {
+            page.style.display = "none"
+            // page2.style.display = "block"
+            page3.style.display = "block"
+
+        })
+
+    </script>
 </body>
+
 
 </html>
